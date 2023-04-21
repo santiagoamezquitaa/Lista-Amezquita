@@ -1,0 +1,16 @@
+
+<div class="container container-style">
+ <ul class="list-group">
+    <li class="list-group-item li-style" *ngFor="let alumno of listaAlumnos" [ngClass]="alumno.activo ? 'active' : 'inactive'">
+        <p *ngIf="alumno.activo; else inactivo">
+            {{ alumno.nombre }} estudia {{ alumno.carrera }} y es usuario activo. Última fecha de pago: {{alumno.ultimaFechaDePago | date: 'dd/MM/yyyy hh:mm:ss a'}}, por un valor de: {{ alumno.valorMatricula | currency:'COP'}} 
+        </p>
+        <ng-template #inactivo>
+            <p>
+                {{ alumno.nombre }} estudia {{ alumno.carrera }} y es usuario inactivo. Última fecha de pago: {{alumno.ultimaFechaDePago | date: 'dd/MM/yyyy hh:mm:ss a'}}, por un valor de: {{ alumno.valorMatricula | currency:'COP'}}
+            </p>
+        </ng-template>     
+    </li>
+  </ul>   
+</div>
+

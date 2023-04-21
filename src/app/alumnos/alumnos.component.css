@@ -1,0 +1,25 @@
+.container-style {
+    margin-top: 8%;
+    margin-bottom: 15%;
+}
+
+.li-style {
+    background-color: #FFF5EB;
+}
+
+.active {
+    background-color: #CDE990;
+    color: black;
+    font-weight:500;
+    border-color: #AACB73;
+}
+
+.inactive {
+    background-color: #E97777;
+    color: black;
+    border-color: #FF0303;
+}
+
+p {
+    margin-top: 16px;
+}
